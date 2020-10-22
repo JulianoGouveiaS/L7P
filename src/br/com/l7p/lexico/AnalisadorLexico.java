@@ -7,7 +7,9 @@ public class AnalisadorLexico {
 	
 	private static final List<Token> tokens = new ArrayList<Token>();
 	private static final List<Erros> erros = new ArrayList<Erros>();
-	
+
+	private String testeSeminario;
+
 	/*
 	 * PR -> Palavra Reservada
 	 * DE -> Delimitador
