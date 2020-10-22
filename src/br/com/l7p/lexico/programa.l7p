@@ -1,0 +1,28 @@
+faz paoDeQuejo(ano : inteiro) : vacuo {
+
+  ano = 2020;
+
+  no(ano > 2000){
+
+    amostra("exemplo de esse aqui realmente escrevando");
+
+    ano = ano1 - 1;
+  }
+
+  jubileu : inteiro;
+
+  jubileu = 100;
+
+  seEsseTrem (jubileu >= 2000){
+
+    amostra("entrou no seEsseTrem");
+
+  }cascontrario seEsseTrem (jubileu < 200){
+
+    amostra("entrou no cascontrario 1");
+
+  }
+
+  bota("exemplo de texto");
+
+}

@@ -1,0 +1,89 @@
+
+<ListDef> ::= <Def><ListDef> |
+
+<Def> ::= ‘def’  id ‘(‘ <ListParam> ‘)’  ‘:’  <Tipo> ‘{‘ <ListComan> ‘}’
+
+<ListParam> ::= <Param><ListParam2> |
+
+<ListParam2> ::=  ‘,’ <Param><ListParam2> | 
+
+<Param> ::= id ‘:’ <Tipo>
+
+<Tipo> ::= ‘inteiro’
+		| ‘real’
+		| ‘texto’
+		| ‘nada’
+
+<ListComan> ::=  | <Coman><ListComan>
+
+<Coman> ::= <Decl>
+			| <Atrib>
+			| <Se>
+			| <Laco>
+			| <Ret>
+			| <Entrada>
+			| <Saida>
+			| <Chamada> ‘;’
+			| ‘{’ <ListComan> ‘}’
+
+<Decl> ::= <ListId> ‘:’ <Tipo> ‘;’
+
+<ListId> ::= id <ListId2>
+
+<ListId2> ::= ‘,’ id <ListId2> | 
+
+<Atrib> ::= id ‘=‘ <ExpArit> ‘;’
+
+<ExpArit> ::= <Termo><ExpArit2>
+
+<ExpArit2> ::=  | <Op1> <ExpArit>
+
+<Termo> ::= <Fator><Termo2>
+
+<Termo2> ::= | <Op2> <Termo>
+
+<Fator> ::= <Operando> | <Chamada> | ‘(‘ <ExpArit> ‘)’
+
+<Operando> ::= id 
+			| cli
+			| clr
+			| clt
+
+<Op1> ::= ‘+’
+		| ‘-‘
+
+<Op2> ::= ‘*’
+		| ‘/‘
+ 
+<Se> ::= ‘se’ ‘(‘ <ExpRel> ‘)’ <Coman> <Senao>
+
+<Senao> ::= ‘senao’ <Coman> | 
+
+<ExpRel> ::= <ExpArit> <Op3> <ExprArit>
+
+<Op3> ::= ‘>’
+		| ‘>=‘
+		| ‘<‘
+		| ‘<=‘
+		| ‘==‘
+		| ‘!=‘
+
+<Laco> ::= ‘enquanto’  ‘(‘  <ExpRel> ’)’ <Coman>
+
+<Ret> ::= ‘retorna’ <Fator> ‘;’
+
+<Entrada> ::= ‘leia’ ‘(‘ id ‘)’ ‘;’ 
+
+<Saida> ::= ‘escreva’ ‘(‘ <Operando> ‘)’ ‘;’ 
+
+<Chamada> ::= id ‘(‘ <ListArg> ‘)’ ‘;’
+
+<ListArg> ::=  | <Operando> <ListArg2>
+
+<ListArg2> ::=  | ‘,’ <Operando><ListArg2> 
+			
+
+
+
+
+
