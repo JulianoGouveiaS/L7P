@@ -21,7 +21,7 @@ public class AnalisadorLexico {
 	 * CLR -> Constante Literal Real
 	 * CLT -> Constante Literal Texto
 	 */
-	
+	// Teste seminario xandao top
 	
 	public static enum Simbolos{
 		PR, DE, OPA, OPC, OA, CLI, CLR, CLT, ID, $
